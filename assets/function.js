@@ -123,8 +123,8 @@ render() {
         newLi.innerText = e;
         document.querySelector('.log').append(newLi);
     })
+},
 
 //duas formas diferentes de fazer o log nos exemplos acima uma usando o for in, e outra usando o forEach...
 
-},
 }
