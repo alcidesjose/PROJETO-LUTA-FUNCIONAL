@@ -110,20 +110,21 @@ const log = {
     this.render();
   },
 
-//   render() {
-//     const logEl = document.querySelector(".log");
-//     logEl.innerHTML = "";
-//     for (let i in this.list) {
-//       logEl.innerHTML += `<li>${this.list[i]}</li>`;
-//     }
-//   },
-render() {
-    let newLi = document.createElement('li');
-    this.list.forEach((e) => {
-        newLi.innerText = e;
-        document.querySelector('.log').append(newLi);
-    })
-},
+  render() {
+    const logEl = document.querySelector(".log");
+    logEl.innerHTML = "";
+    for (let i in this.list) {
+      logEl.innerHTML += `<li>${this.list[i]}</li>`;
+    }
+    logEl.scrollTop = logEl.scrollHeight;
+  },
+// render() {
+//     let newLi = document.createElement('li');
+//     this.list.forEach((e) => {
+//         newLi.innerText = e;
+//         document.querySelector('.log').append(newLi);
+//     })
+// },
 
 //duas formas diferentes de fazer o log nos exemplos acima uma usando o for in, e outra usando o forEach...
 
